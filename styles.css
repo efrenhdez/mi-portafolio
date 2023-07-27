@@ -1,0 +1,256 @@
+:root{
+--tipo-titulos: 'DM Serif Text', serif;
+--tipo-principal: 'Inter Tight', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+h1, h2, h3, h4{
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+body{
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    min-height: 100vh;
+}
+
+.circulos{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    z-index: 1;
+    filter: blur(2em);
+    animation: circulos 100s linear infinite both;
+}
+.circulos .circulo{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    
+    animation: circulos 100s linear infinite both;
+}
+
+.circulos .circulo1{
+    top: 0%;
+    left: 0%;
+}
+.circulos .circulo2{
+    top: 0%;
+    right: 0%;
+}
+.circulos .circulo3{
+    bottom: 0%;
+    left: 0%;
+}
+.circulos .circulo4{
+    bottom: 0%;
+    right: 0%;
+}
+.header{}
+.header .h1{}
+
+.main{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.main .seccion{
+    font-size: 1.2em;
+    width: 100%;
+    min-height: 80vh;
+    padding: 2em;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.main .seccion .section{
+    animation: aparecer1 2s ease 1 both;
+}
+.main .seccion .ul{
+    margin: 2em 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.main .seccion .ul .li{
+    margin: 0 1em;
+}
+.main .seccion .ul .li .a{
+    border-top: 2px solid rgba(0,0,0,.4);
+
+    padding: 1em 1em 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    transition: all 300ms linear;
+    animation: aparecer1 2s ease 1 backwards;
+}
+
+.main .seccion .ul .li .a:hover{
+    border-color: black;
+    color: white;
+}
+.main .seccion .h2{
+    font-family: var(--tipo-titulos);
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1em;
+}
+.main .seccion .h3{
+    font-family: var(--tipo-titulos);
+    font-size: 4em;
+    font-weight: 100;
+}
+
+.seccion .p{}
+.seccion .grid{
+    width: 90%;
+    max-width: 40em;
+    margin: 1em 0;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 10rem, 1fr));
+    gap: 1em;
+}
+.seccion .grid .article{
+    width: 100%;
+    min-height: 20vh;
+    background: lightgoldenrodyellow;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 1em;
+}
+.seccion .grid .article .a{}
+.seccion .grid .article .a .img{
+    width: 100%;
+}
+.seccion .grid .article .a .h4{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(1rem);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 1.5em;
+    font-family: var(--tipo-titulos);
+    font-style: italic;
+
+    opacity: 0;
+    transform:translateZ(1) scale(1.2);
+    transition: all 300ms ease;
+}
+.seccion .grid .article:hover .a .h4{
+    opacity: 1;
+    transform:translateZ(1) scale(1);
+}
+#works{
+    background: rgba(0, 0, 0, .5);
+    color: white;
+}
+#works .h2{
+    margin: 0 0 1rem;
+}
+
+.about{}
+.about .h2{
+    margin: 0 0 2rem;
+}
+.about .p{
+    max-width: 40rem;
+    margin: 0 0 2rem;
+    font-size: 1.3em;
+    text-align: center;
+}
+.about .rrss{
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.about .rrss .li{
+    margin: 0 1em;
+}
+.about .rrss .li .a{}
+.about .rrss .li .a .svg{
+    width: 3em;
+    height: 3em;
+}
+
+.footer{
+    background:  rgba(0, 0, 0, .5);
+    padding: 2em 0;
+    text-align: center;
+}
+.footer .span{
+    color: white;
+}
+
+@keyframes circulos{
+    from{
+        transform: rotate(0deg) scale(3);
+    }
+    to{
+        transform: rotate(360deg) scale(3);
+    }
+}
+
+@keyframes aparecer1{
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
