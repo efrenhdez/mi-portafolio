@@ -1,15 +1,10 @@
 ## Descripción 💬
-Este es mi portafolio hecho en HTML y CSS
+Este es un ejemplo de portafolio hecho con CSS y HTML
 
 ## 🤝 Autor ⚡
 **Efrén Hernández**
 
 * Linkedin www.linkedin.com/in/efrenhdez
-* [Portafolio Web](https://efrenhdez.github.io/mi-portafolio/)
 
 ## Ver ejemplo en vivo 🔭
 https://efrenhdez.github.io/mi-portafolio/
-
-## Contratación 📫
-Si quieres contratarme puedes escribirme a efrenhdezcantoral@gmail.com para consultas.
-
